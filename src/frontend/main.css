@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-size: 23px; */
+}
+
+:root {
+  --calcfont: 'Calculator', sans-serif;
+  --orbitron: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: rgb(193, 233, 171);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header, footer {
+  background-color: white;
+
+  padding: 1rem;
+  border-radius: 10px;
+}
+.container {
+  /* min-width: 30vw; */
+  width: 90vw;
+  height: 55vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.screen {
+  font-family: var(--calcfont);
+  background-color: rgba(72, 72, 236, 0.542);
+  border-radius: 5px;
+  padding: .7rem .5rem;
+  text-align: right;
+  font-size: 2rem;
+  height: 70px;
+  
+}
+
+.line {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: auto;
+  
+}
+
+.optKey, .numKey {
+  display: flex;
+  padding: .8rem 1.2rem;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: var(--orbitron);
+}
+
+.optKey:hover, .numKey:hover {
+  cursor: pointer;
+}
+
+#reset, #sqrt, #power, #sqrt, #floor{
+  font-size: .8rem;
+}
+
+
+@media screen and (min-width: 450px) {
+  .container {
+      width: 400px;
+      height: 450px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+  }
+
+  .optKey, .numKey {
+      /* display: flex; */
+      padding: 2rem;
+      /* margin: auto;
+      background-color: black;
+      color: white;
+      border-radius: 50%; */
+      font-size: 1.5rem;
+      /* align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      text-align: center; */
+  }
+
+  .screen {
+      display: flex;
+      font-family: var(--calcfont);
+      background-color: rgba(72, 72, 236, 0.542);
+      border-radius: 8px;
+      padding: .5rem;
+      justify-content: end;
+      align-items: center;
+      font-size: 5rem;
+      height: 90px;
+  }
+
+  #reset, #sqrt, #power, #sqrt, #floor{
+      font-size: 1.2rem;
+  }
+}

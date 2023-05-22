@@ -1,0 +1,30 @@
+// const numKeys = document.getElementById("numKey");
+// const numKeys = document.getElementsByClassName("numKey");
+const optKeys = document.getElementsByClassName("optKey");
+const screen = document.getElementById("calcScreen");
+
+let i = 0;
+let nk = document.querySelectorAll(".numKey");
+let ok = document.querySelectorAll(".optKey");
+
+    for(a of nk) {
+        a.addEventListener("click", function() {
+            let x = this.innerHTML;
+            i = x;
+            screen.innerHTML = i;
+            console.log("current no. is " + i);
+        })   
+    };
+
+    for (a of ok) {
+        a.addEventListener("click", function() {
+            
+        })
+    }
+
+
+const clearConsole = () => {
+    console.clear();
+};
+
+const clearConsoleTime = setTimeout(clearConsole, 2000);
