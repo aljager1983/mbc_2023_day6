@@ -8,10 +8,18 @@
 :root {
   --calcfont: 'Calculator', sans-serif;
   --orbitron: 'Orbitron', sans-serif;
+  --calcBg: rgb(124, 142, 200);
+  --calcSCr: rgba(52, 69, 125, 0.928);
+  --headFont: 'Michroma', sans-serif;
+}
+canvas {
+  display: block;
+  position: absolute;
+  z-index: -1;
 }
 
 body {
-  background-color: rgb(193, 233, 171);
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,27 +29,36 @@ body {
 
 header, footer {
   background-color: white;
-
   padding: 1rem;
   border-radius: 10px;
+  width: 90vw;
+  text-align: center;
+  font-family: var(--headFont);
+  font-size: 1rem;
 }
+
+
 .container {
   /* min-width: 30vw; */
   width: 90vw;
   height: 55vh;
-  background-color: white;
+  background-color: var(--calcBg);
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
+  box-shadow: 0 0 5px 5px rgba(72, 72, 236, 0.542);
 }
 
 .screen {
+  display: flex;
   font-family: var(--calcfont);
-  background-color: rgba(72, 72, 236, 0.542);
+  background-color: var(--calcSCr);
   border-radius: 5px;
   padding: .7rem .5rem;
+  justify-content: end;
+      align-items: center;
   text-align: right;
-  font-size: 2rem;
+  font-size: 3rem;
   height: 70px;
   
 }
@@ -58,15 +75,16 @@ header, footer {
   display: flex;
   padding: .8rem 1.2rem;
   margin: auto;
-  background-color: black;
+  background-color: rgb(27, 25, 25);
   color: white;
-  border-radius: 50%;
+  border-radius: 5px;
+  font-family: var(--orbitron);
   align-items: center;
   justify-content: center;
   width: 50px;
   height: 50px;
   text-align: center;
-  font-family: var(--orbitron);
+
 }
 
 .optKey:hover, .numKey:hover {
@@ -82,30 +100,22 @@ header, footer {
   .container {
       width: 400px;
       height: 450px;
-      background-color: white;
+      background-color: var(--calcBg);
       border-radius: 10px;
       padding: 1rem;
   }
-
+  header, footer {
+      width: 400px;
+  }
   .optKey, .numKey {
-      /* display: flex; */
       padding: 2rem;
-      /* margin: auto;
-      background-color: black;
-      color: white;
-      border-radius: 50%; */
       font-size: 1.5rem;
-      /* align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      text-align: center; */
   }
 
   .screen {
       display: flex;
       font-family: var(--calcfont);
-      background-color: rgba(72, 72, 236, 0.542);
+      background-color: var(--calcSCr);
       border-radius: 8px;
       padding: .5rem;
       justify-content: end;
